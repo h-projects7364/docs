@@ -1,0 +1,281 @@
+---
+title: "Gmail Integration"
+description: "View email history and create drafts from within Pockla"
+icon: "envelope"
+---
+
+The Gmail integration connects your email to Pockla's Boards, letting you see email history with contacts and draft replies without leaving the app.
+
+{/* TODO: Video - Gmail integration overview (45-60 seconds showing connection and usage) */}
+<Frame caption="Video: Gmail integration overview (45-60 seconds showing connection and usage)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+## What It Does
+
+Once connected, Gmail integration enables:
+
+- **Email history** – View all emails exchanged with a contact's company domain
+- **Create drafts** – Draft new emails or replies directly from Boards
+- **AI-assisted emails** – The Board Agent can read your email history and draft contextual replies
+
+## Where It Appears
+
+Gmail integration is used in **Boards**. When viewing a contact card, the **Emails** panel shows:
+
+- Recent emails with that contact's company (by domain)
+- Sent and received messages
+- Draft emails in progress
+- Quick links to open emails in Gmail
+
+{/* TODO: Screenshot - Emails panel in Board view */}
+<Frame caption="Screenshot: Emails panel in Board view">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Connecting Gmail
+
+<Steps>
+  <Step title="Open a Board">
+    Navigate to **Boards** and open any board with contacts.
+    
+    {/* TODO: Screenshot - Boards page */}
+<Frame caption="Screenshot: Boards page">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Open the Emails Panel">
+    Click on a contact card to open the detail view, then click the **Emails** panel tab.
+    
+    {/* TODO: Screenshot - Contact detail with Emails tab */}
+<Frame caption="Screenshot: Contact detail with Emails tab">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Click Connect Gmail">
+    If Gmail isn't connected, you'll see a prompt. Click **Connect Gmail**.
+    
+    {/* TODO: Screenshot - Connect Gmail prompt */}
+<Frame caption="Screenshot: Connect Gmail prompt">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Authorize with Google">
+    You'll be redirected to Google's OAuth screen. Sign in with the Gmail account you use for work emails.
+    
+    Pockla requests these permissions:
+    - **Read emails** – To show email history in the panel
+    - **Compose emails** – To create drafts on your behalf
+    
+    {/* TODO: Screenshot - Google OAuth permission screen */}
+<Frame caption="Screenshot: Google OAuth permission screen">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Return to Pockla">
+    After authorizing, you're redirected back to Pockla. The Emails panel now shows your email history with that contact's company.
+    
+    {/* TODO: Screenshot - Connected state with emails showing */}
+<Frame caption="Screenshot: Connected state with emails showing">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+</Steps>
+
+## Using the Emails Panel
+
+### Viewing Emails
+
+The Emails panel shows all emails exchanged with the contact's **company domain**. For example, if viewing a contact with email `john@acme.com`, you'll see all emails to/from `@acme.com`.
+
+Each email shows:
+- **Direction** – Sent (→) or received (←)
+- **Date** – When the email was sent
+- **Subject** – Email subject line
+- **Preview** – First few lines of content
+
+{/* TODO: Screenshot - Email list with multiple emails */}
+<Frame caption="Screenshot: Email list with multiple emails">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+Click an email to see the full content.
+
+{/* TODO: Screenshot - Expanded email content view */}
+<Frame caption="Screenshot: Expanded email content view">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Email Actions
+
+From the email detail view:
+
+| Action | Description |
+|--------|-------------|
+| **Copy** | Copy email body to clipboard |
+| **Open in Gmail** | Open the email in Gmail in a new tab |
+
+### Drafts
+
+Draft emails appear in the list with a pen icon. Click to view and edit in Gmail.
+
+## Board Agent Email Tools
+
+When Gmail is connected, the Board Agent (AI assistant in Boards) can work with your emails:
+
+### Read Emails
+
+Ask the agent to check email history:
+
+> "What's our recent email thread with this contact?"
+
+> "Show me the last few emails with Acme Corp"
+
+{/* TODO: Screenshot - Board Agent reading email history */}
+<Frame caption="Screenshot: Board Agent reading email history">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Create Drafts
+
+Ask the agent to draft emails:
+
+> "Draft a follow-up email to John about our last conversation"
+
+> "Write a reply to their latest email asking about pricing"
+
+The agent creates drafts in your Gmail—you review and send from Gmail.
+
+{/* TODO: Screenshot - Board Agent creating email draft */}
+<Frame caption="Screenshot: Board Agent creating email draft">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Reply to Threads
+
+The agent can create threaded replies:
+
+> "Reply to the email about the Q2 proposal"
+
+Replies appear in the correct Gmail thread, preserving conversation context.
+
+<Tip>
+The agent uses contact data, enrichments, and email history to write contextual, personalized drafts. The more data you have on a contact, the better the drafts.
+</Tip>
+
+## Data & Privacy
+
+### What Pockla Accesses
+
+- **Email metadata** – Subject, sender, recipient, date
+- **Email content** – Body text for display and AI context
+- **Only relevant emails** – Filtered to the contact's company domain
+
+### What Pockla Stores
+
+- **OAuth tokens** – Encrypted, used to access Gmail API
+- **Email cache** – Temporary, for display in the panel
+
+Pockla does not:
+- Store a permanent copy of your emails
+- Access emails unrelated to your contacts
+- Send emails without your explicit action (drafts only)
+
+### Revoking Access
+
+To disconnect Gmail:
+
+1. Go to **Settings** → **Integrations**
+2. Find Gmail and click **Disconnect**
+
+{/* TODO: Screenshot - Gmail disconnect option */}
+<Frame caption="Screenshot: Gmail disconnect option">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+Or revoke from Google:
+1. Go to [Google Account Security](https://myaccount.google.com/permissions)
+2. Find Pockla and click **Remove Access**
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Emails not showing">
+    - Ensure the contact has an email address with a company domain
+    - Personal emails (gmail.com, outlook.com) won't match company emails
+    - Check that Gmail is still connected (may need to reconnect if token expired)
+  </Accordion>
+  
+  <Accordion title="OAuth error during connection">
+    - Ensure you're signing in with a Google Workspace or personal Gmail account
+    - Try clearing browser cookies and reconnecting
+    - Check that popup blockers aren't preventing the OAuth window
+  </Accordion>
+  
+  <Accordion title="Drafts not appearing in Gmail">
+    - Drafts may take a few seconds to sync
+    - Check the Drafts folder in Gmail
+    - Ensure you authorized the "compose" permission
+  </Accordion>
+  
+  <Accordion title="Board Agent can't access emails">
+    - Gmail must be connected before the agent can use email tools
+    - Connect Gmail in the Emails panel, then try again
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Boards" icon="table-columns" href="/boards/introduction">
+    Learn about Boards and contact management
+  </Card>
+  <Card title="Research Agent" icon="robot" href="/data/research-agent">
+    Use AI to research contacts alongside email history
+  </Card>
+</CardGroup>

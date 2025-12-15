@@ -1,0 +1,296 @@
+---
+title: "Boards Introduction"
+description: "Individual contact workspaces with customizable panels"
+icon: "table-columns"
+---
+
+
+Boards in Pockla are **individual contact workspaces**—a dedicated view for each contact where you can see their profile, take notes, chat with AI, run research, and manage all your interactions in one place.
+
+{/* TODO: Video - Boards overview showing panel interactions (45-60 seconds) */}
+<Frame caption="Video: Boards overview showing panel interactions (45-60 seconds)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+{/* TODO: Screenshot - Full board view showing multiple panels */}
+<Frame caption="Screenshot: Full board view showing multiple panels">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## What Is a Board?
+
+Each contact in Pockla has their own board. Think of it as a CRM record on steroids:
+
+- **Draggable, resizable panels** arranged in a grid layout
+- **Profile information** at a glance
+- **Notes** for tracking interactions
+- **AI Chat** for asking questions about the contact
+- **Enrichment panels** showing AI-generated research
+- **Email** integration for viewing and sending messages
+
+Your panel layout is saved automatically—arrange panels however works best for you.
+
+## Accessing a Board
+
+There are several ways to open a contact's board:
+
+1. **From Contacts**: Click a contact row, then click "View Board" from the actions menu
+2. **After creating a contact**: When you add a contact from anywhere except the contacts page, you're taken directly to their board
+3. **Direct URL**: Navigate to `/board/{contactId}`
+
+{/* TODO: Screenshot - Contact row with "View Board" action highlighted */}
+<Frame caption="Screenshot: Contact row with 'View Board' action highlighted">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Default Panels
+
+Every board starts with these core panels:
+
+### Profile Panel
+
+Shows essential contact information at a glance:
+
+- **Avatar** (generated from email)
+- **Name and title**
+- **Company**
+- **Status badge** (Lead, Prospect, Customer, Churned)
+- **Quick actions**: Email button, Website link
+- **Contact details**: Email, phone
+
+{/* TODO: Screenshot - Profile panel close-up */}
+<Frame caption="Screenshot: Profile panel close-up">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### AI Chat Panel
+
+Chat with an AI assistant that knows about this contact. Ask questions, get suggestions for outreach, or brainstorm talking points.
+
+The chat history is saved per-contact, so you can continue conversations across sessions.
+
+{/* TODO: Screenshot - AI Chat panel with conversation */}
+<Frame caption="Screenshot: AI Chat panel with conversation">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Notes Panel
+
+Keep track of your interactions:
+
+- **Add notes** with title and rich text content
+- **View all notes** in a list format
+- **Click to expand** any note to see full details
+- **Edit notes** inline
+- **Copy content** with one click
+
+Notes support Markdown formatting and are timestamped automatically.
+
+{/* TODO: Screenshot - Notes panel with multiple notes */}
+<Frame caption="Screenshot: Notes panel with multiple notes">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Adding Panels
+
+Click the **"+ Add Panel"** button in the board header to add more panels.
+
+{/* TODO: Screenshot - Add Panel modal showing available panel types */}
+<Frame caption="Screenshot: Add Panel modal showing available panel types">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Available Panel Types
+
+| Panel Type | Description |
+|------------|-------------|
+| **Profile** | Contact information (included by default) |
+| **Notes** | Meeting notes, call logs, interaction history |
+| **Emails** | Email history and compose (requires email setup) |
+| **AI Chat** | Conversational AI assistant for this contact |
+| **Enrichment** | AI-powered research panels (custom objectives) |
+
+### Creating an Enrichment Panel
+
+Enrichment panels are powered by the [Research Agent](/data/research-agent). When adding one:
+
+1. Click **"+ Add Panel"**
+2. Select **"New Research"**
+3. Configure the research:
+   - **Title**: What to call this panel (e.g., "Funding News")
+   - **Objective**: What you want to learn (e.g., "Find recent funding announcements for {company}")
+   - **Output format**: How to structure results (e.g., "Bullet points with sources")
+   - **Iterations**: How deep to research (1-10)
+4. Click **Create**
+
+{/* TODO: Screenshot - Enrichment panel configuration */}
+<Frame caption="Screenshot: Enrichment panel configuration">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+The new panel appears on your board and automatically runs the research.
+
+{/* TODO: Screenshot - Enrichment panel with completed research */}
+<Frame caption="Screenshot: Enrichment panel with completed research">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Panel Interactions
+
+### Drag & Drop
+
+Rearrange panels by dragging their header bar:
+
+- Panels snap to a 12-column grid
+- Other panels automatically move to make room
+- Layout saves automatically
+
+{/* TODO: GIF - Dragging panels to rearrange */}
+<Frame caption="GIF: Dragging panels to rearrange">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [GIF placeholder]
+  </div>
+</Frame>
+
+
+### Resize
+
+Drag panel edges or corners to resize:
+
+- Minimum size is enforced per panel type
+- Grid-based sizing ensures clean layouts
+
+{/* TODO: GIF - Resizing a panel */}
+<Frame caption="GIF: Resizing a panel">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [GIF placeholder]
+  </div>
+</Frame>
+
+
+### Minimize / Maximize
+
+Use the panel header controls:
+
+- **Minimize** (−): Collapse to just the header bar
+- **Maximize** (⤢): Expand to fill the board
+- **Close** (×): Remove the panel from your board
+
+### Edit Enrichment Panels
+
+For enrichment/research panels:
+
+1. Click the **pencil icon** in the panel header
+2. Modify the research configuration
+3. Choose to **Save** or **Save & Re-run**
+
+Re-running regenerates the research with new parameters.
+
+## Panel Types in Detail
+
+### Emails Panel
+
+<Note>
+Requires [email integration](/boards/adding-email) to be configured.
+</Note>
+
+View email history with this contact:
+- See sent and received emails
+- Compose new emails directly
+- Track opens and clicks
+
+{/* TODO: Screenshot - Emails panel showing email thread */}
+<Frame caption="Screenshot: Emails panel showing email thread">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Enrichment Panel
+
+Shows AI-generated research about the contact or their company:
+
+| Status | Display |
+|--------|---------|
+| **Pending** | "Pending" badge |
+| **Generating** | Spinner animation |
+| **Completed** | Full research content with Markdown formatting |
+| **Failed** | Error message with retry option |
+
+Click the **refresh icon** to re-run research at any time.
+
+## Board Architecture
+
+Under the hood, boards use:
+
+- **react-grid-layout**: For the draggable/resizable grid
+- **Per-user layouts**: Your arrangement is saved and synced
+- **Per-contact data**: Notes, chat history, and enrichments are stored per contact
+- **Real-time updates**: Changes sync across tabs/devices
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Arrange panels for your workflow">
+    Put frequently-used panels at the top left. Consider a layout like:
+    - **Top row**: Profile (narrow) + AI Chat (wide)
+    - **Middle row**: Research panels
+    - **Bottom row**: Notes + Emails
+  </Accordion>
+  
+  <Accordion title="Use enrichment panels strategically">
+    Create different enrichment panels for different research needs:
+    - "Recent News" for keeping up with company updates
+    - "Talking Points" for personalized outreach ideas
+    - "Competitor Analysis" for sales intelligence
+  </Accordion>
+  
+  <Accordion title="Take notes after every interaction">
+    Build a history of your relationship with each contact. Future you (and teammates) will thank you.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Panels" icon="plus" href="/boards/panels">
+    Learn about all available panel types
+  </Card>
+  <Card title="Set Up Email" icon="envelope" href="/boards/adding-email">
+    Send emails directly from boards
+  </Card>
+  <Card title="Research Agent" icon="robot" href="/data/research-agent">
+    Configure AI-powered research
+  </Card>
+  <Card title="Enrich Data" icon="sparkles" href="/data/enriching-data">
+    Auto-populate contact data
+  </Card>
+</CardGroup>

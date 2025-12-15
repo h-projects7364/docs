@@ -1,0 +1,153 @@
+---
+title: "Columns & Custom Fields"
+description: "Customize your contacts table with custom columns"
+icon: "table-columns"
+---
+
+Customize your contacts table by adding, removing, and configuring columns to match your workflow.
+
+{/* TODO: Screenshot - Contacts table with multiple column types visible */}
+<Frame caption="Screenshot: Contacts table with multiple column types visible">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Managing Columns
+
+### Viewing Column Options
+
+1. Navigate to **Contacts**
+2. Click the **Columns** button (or column settings icon)
+3. View available columns
+
+{/* TODO: Screenshot - Column picker dropdown showing available columns */}
+<Frame caption="Screenshot: Column picker dropdown showing available columns">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Showing/Hiding Columns
+
+Toggle columns on or off to customize your view:
+
+- Check/uncheck columns in the column picker
+- Changes apply to your view
+
+### Reordering Columns
+
+Drag columns to reorder them in your preferred arrangement.
+
+{/* TODO: GIF - Dragging columns to reorder them */}
+<Frame caption="GIF: Dragging columns to reorder them">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [GIF placeholder]
+  </div>
+</Frame>
+
+
+## Creating Custom Columns
+
+<Steps>
+  <Step title="Open Column Settings">
+    Click **Columns** → **Add Column**
+    
+    {/* TODO: Screenshot - Add column button in column picker */}
+<Frame caption="Screenshot: Add column button in column picker">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Configure Column">
+    Set the following:
+    - **Name**: Display name for the column
+    - **Type**: Data type (see below)
+    - **Description**: Optional help text
+    
+    {/* TODO: Screenshot - Add column modal with configuration options */}
+<Frame caption="Screenshot: Add column modal with configuration options">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Save">
+    Click **Create** to add the column
+  </Step>
+</Steps>
+
+## Column Types
+
+| Type | Description | Example Values |
+|------|-------------|----------------|
+| Text | Single line of text | "Enterprise", "Hot Lead" |
+| Long Text | Multi-line text | Notes, descriptions |
+| Number | Numeric values | 1000, 50.5 |
+| Date | Date picker | 2024-01-15 |
+| Dropdown | Single select from options | "Active", "Inactive" |
+| Multi-select | Multiple selections | Tags, categories |
+| Checkbox | Boolean true/false | ✓ / ✗ |
+| URL | Clickable link | https://example.com |
+| Email | Email address | user@example.com |
+
+## Special Columns
+
+### Enrichment Columns
+
+Some columns are automatically populated by [data enrichment](/data/enriching-data):
+
+- Company Domain
+- LinkedIn URL
+- Industry
+- Company Size
+
+{/* TODO: Screenshot - Enrichment column showing AI-generated content */}
+<Frame caption="Screenshot: Enrichment column showing AI-generated content">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Column Best Practices
+
+<AccordionGroup>
+  <Accordion title="Naming Conventions">
+    - Use clear, descriptive names
+    - Avoid abbreviations
+    - Consider future filtering needs
+  </Accordion>
+  
+  <Accordion title="Choosing Column Types">
+    - Use dropdowns for controlled values
+    - Use text for free-form data
+    - Consider reporting needs when choosing types
+  </Accordion>
+</AccordionGroup>
+
+## Deleting Columns
+
+<Warning>
+Deleting a column removes all data in that column across all contacts. This action cannot be undone.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Enrich Data" icon="sparkles" href="/data/enriching-data">
+    Auto-populate columns with AI enrichment
+  </Card>
+  <Card title="Create Lists" icon="list" href="/contacts/lists">
+    Filter and segment using your custom columns
+  </Card>
+</CardGroup>

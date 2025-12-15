@@ -1,0 +1,155 @@
+---
+title: "Standard HTML Installation"
+description: "Add Pockla to any website with HTML access"
+icon: "code"
+---
+
+Adding the Pockla personalization script to your website's `<head>` section takes just a few minutes.
+
+## Step 1: Open Your HTML
+
+Locate the HTML file that contains your site's `<head>` section. This is typically:
+
+- `index.html` for static sites
+- A layout or template file for frameworks
+- Your theme's header file for CMS platforms
+
+## Step 2: Add the Script
+
+Copy the Pockla script:
+
+```html
+<script src="https://cdn.pockla.io/pockla.min.js"></script>
+```
+
+Paste it directly after the opening `<head>` tag:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.pockla.io/pockla.min.js"></script>
+  
+  <!-- Your other head content -->
+  <meta charset="UTF-8">
+  <title>Your Site</title>
+  ...
+</head>
+```
+
+<Warning>
+Place the script as early as possible in the `<head>` to prevent flicker. Don't add `async` or `defer` attributes—these disable the anti-flicker functionality.
+</Warning>
+
+## Step 3: Save and Deploy
+
+Save your changes and deploy to your live site.
+
+## Verify Installation
+
+Open your site in a browser and check that it's working:
+
+1. Open Developer Tools (F12 or right-click → Inspect)
+2. Go to the **Network** tab
+3. Reload the page
+4. Filter by "pockla"
+5. You should see `pockla.min.js` loading successfully
+
+## Framework-Specific Notes
+
+<AccordionGroup>
+  <Accordion title="Next.js / React">
+    For Next.js, add the script to your root layout:
+    
+    ```jsx
+    // app/layout.tsx
+    export default function RootLayout({ children }) {
+      return (
+        <html>
+          <head>
+            <script src="https://cdn.pockla.io/pockla.min.js" />
+          </head>
+          <body>{children}</body>
+        </html>
+      )
+    }
+    ```
+    
+    Or use `next/script` with `beforeInteractive` strategy:
+    
+    ```jsx
+    import Script from 'next/script'
+    
+    <Script 
+      src="https://cdn.pockla.io/pockla.min.js" 
+      strategy="beforeInteractive" 
+    />
+    ```
+  </Accordion>
+  
+  <Accordion title="Vue / Nuxt">
+    For Nuxt 3, add to `nuxt.config.ts`:
+    
+    ```typescript
+    export default defineNuxtConfig({
+      app: {
+        head: {
+          script: [
+            { src: 'https://cdn.pockla.io/pockla.min.js' }
+          ]
+        }
+      }
+    })
+    ```
+  </Accordion>
+  
+  <Accordion title="Astro">
+    Add to your layout's `<head>`:
+    
+    ```astro
+    ---
+    // src/layouts/Layout.astro
+    ---
+    <html>
+      <head>
+        <script src="https://cdn.pockla.io/pockla.min.js"></script>
+      </head>
+      <body>
+        <slot />
+      </body>
+    </html>
+    ```
+  </Accordion>
+  
+  <Accordion title="Static HTML">
+    Simply add the script to every page's `<head>`, or to a shared header include file.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Script not loading">
+    - Check for typos in the script URL
+    - Ensure there are no JavaScript errors blocking execution
+    - Verify the script tag is inside `<head>`, not `<body>`
+  </Accordion>
+  
+  <Accordion title="Personalization not appearing">
+    - Confirm you've published personalization rules in Pockla
+    - Check that the visitor matches your targeting criteria
+    - Clear your browser cache and reload
+  </Accordion>
+  
+  <Accordion title="Flash of unpersonalized content">
+    - Move the script earlier in the `<head>` (right after the opening tag)
+    - Remove any `async` or `defer` attributes
+    - Ensure no other scripts are blocking Pockla from loading
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+<Card title="Contact Support" icon="headset" href="mailto:support@pockla.io">
+  Get help with installation
+</Card>

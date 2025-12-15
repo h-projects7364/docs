@@ -1,0 +1,147 @@
+---
+title: "WordPress Installation"
+description: "Add Pockla personalization to your WordPress site"
+icon: "wordpress"
+---
+
+Adding the Pockla personalization script to your WordPress site's `<head>` section can be done in several ways. Choose the method that works best for you.
+
+## The Script
+
+```html
+<script src="https://cdn.pockla.io/pockla.min.js"></script>
+```
+
+## Method 1: Using a Plugin (Recommended)
+
+The easiest way is to use a header/footer plugin.
+
+<Steps>
+  <Step title="Install a Plugin">
+    Install and activate one of these plugins:
+    - **Insert Headers and Footers** (by WPBeginner)
+    - **WPCode** (formerly Insert Headers and Footers)
+    - **Header Footer Code Manager**
+  </Step>
+  
+  <Step title="Add the Script">
+    Go to the plugin's settings (usually under **Settings** or **Tools**)
+    
+    Paste the Pockla script in the **Header** section:
+    
+    ```html
+    <script src="https://cdn.pockla.io/pockla.min.js"></script>
+    ```
+  </Step>
+  
+  <Step title="Save">
+    Click **Save** to apply changes
+  </Step>
+</Steps>
+
+<Tip>
+Using a plugin ensures the script persists through theme updates.
+</Tip>
+
+## Method 2: Theme Editor
+
+Add the script directly to your theme's header file.
+
+<Steps>
+  <Step title="Open Theme Editor">
+    Go to **Appearance** → **Theme File Editor**
+    
+    (On older WordPress versions: **Appearance** → **Editor**)
+  </Step>
+  
+  <Step title="Find header.php">
+    In the right sidebar, click on **header.php** (or **Theme Header**)
+  </Step>
+  
+  <Step title="Add the Script">
+    Find the `<head>` tag and paste the Pockla script right after it:
+    
+    ```php
+    <head>
+    <script src="https://cdn.pockla.io/pockla.min.js"></script>
+    
+    <?php wp_head(); ?>
+    ```
+  </Step>
+  
+  <Step title="Update File">
+    Click **Update File** to save
+  </Step>
+</Steps>
+
+<Warning>
+Theme editor changes will be lost if you update your theme. Use a child theme or a plugin for permanent changes.
+</Warning>
+
+## Method 3: functions.php
+
+Add the script programmatically via your theme's functions file.
+
+<Steps>
+  <Step title="Open functions.php">
+    Go to **Appearance** → **Theme File Editor** and select **functions.php**
+  </Step>
+  
+  <Step title="Add the Code">
+    Add this code at the end of the file:
+    
+    ```php
+    // Add Pockla personalization script
+    function add_pockla_script() {
+        echo '<script src="https://cdn.pockla.io/pockla.min.js"></script>';
+    }
+    add_action('wp_head', 'add_pockla_script', 1);
+    ```
+    
+    The `1` priority ensures it loads early in the `<head>`.
+  </Step>
+  
+  <Step title="Update File">
+    Click **Update File** to save
+  </Step>
+</Steps>
+
+<Tip>
+For permanent changes, add this code to a child theme's functions.php instead.
+</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Which method should I use?">
+    - **Plugin method** – Best for most users. Survives theme updates.
+    - **Theme editor** – Quick but temporary. Lost on theme updates.
+    - **functions.php** – Good for developers. Use a child theme.
+  </Accordion>
+  
+  <Accordion title="How big is the Pockla script?">
+    Less than 4KB when gzipped—extremely lightweight.
+  </Accordion>
+  
+  <Accordion title="Will this affect my site's performance?">
+    No. The script is highly optimized and served from a global CDN.
+  </Accordion>
+  
+  <Accordion title="Is it compatible with caching plugins?">
+    Yes. The Pockla script works with all major caching plugins (WP Rocket, W3 Total Cache, etc.). You may need to clear your cache after installation.
+  </Accordion>
+  
+  <Accordion title="Can I use Google Tag Manager instead?">
+    We don't recommend GTM for Pockla. GTM loads scripts with a delay, causing flicker. Install directly in the header for the best experience.
+  </Accordion>
+  
+  <Accordion title="Can I remove the script later?">
+    Yes. Remove it from wherever you added it (plugin settings, header.php, or functions.php).
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+<Card title="Contact Support" icon="headset" href="mailto:support@pockla.io">
+  Get help with WordPress installation
+</Card>

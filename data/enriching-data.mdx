@@ -1,0 +1,196 @@
+---
+title: "Enriching Data"
+description: "Automatically enrich your contacts with AI-powered data"
+icon: "sparkles"
+---
+
+Pockla's data enrichment automatically fills in missing contact information using AI and external data sources. Turn sparse contact records into rich, actionable profiles.
+
+{/* TODO: Video - Data enrichment flow (45-60 seconds showing enrichment running) */}
+<Frame caption="Video: Data enrichment flow (45-60 seconds showing enrichment running)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+## What Gets Enriched?
+
+### Contact Data
+
+| Field | Description |
+|-------|-------------|
+| Full Name | Parse and complete names |
+| Title | Current job title |
+| Phone | Business phone number |
+| LinkedIn URL | LinkedIn profile URL |
+
+### Company Data
+
+| Field | Description |
+|-------|-------------|
+| Company Name | Official company name from email domain |
+| Industry | Industry classification |
+| Company Size | Employee count range |
+| Headquarters | Location |
+| Website | Company website |
+| Description | Brief company summary |
+
+## Running Enrichment
+
+### Single Contact Enrichment
+
+1. Open a contact
+2. Click **Enrich** (or look for the enrichment action)
+3. View enrichment progress
+4. Review populated fields
+
+{/* TODO: Screenshot - Single contact enrichment button and progress */}
+<Frame caption="Screenshot: Single contact enrichment button and progress">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Bulk Enrichment
+
+Enrich multiple contacts at once:
+
+1. Select contacts using checkboxes
+2. Click **Actions** → **Enrich**
+3. Confirm the operation
+4. Monitor progress
+
+{/* TODO: Screenshot - Bulk enrichment selection and progress */}
+<Frame caption="Screenshot: Bulk enrichment selection and progress">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+{/* TODO: Screenshot - Enrichment progress indicator */}
+<Frame caption="Screenshot: Enrichment progress indicator">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Enrichment Sources
+
+Pockla uses multiple sources for enrichment:
+
+### Web Search
+
+AI-powered web search finds:
+- Company information
+- News and updates
+- Social profiles
+
+### Domain Analysis
+
+Extracts information from email domains:
+- Company website
+- Company name
+- Industry indicators
+
+## Enrichment Quality
+
+### Reviewing Enrichment
+
+Always review AI-enriched data for accuracy, especially:
+- Uncommon names
+- Similar company names
+- Recent job changes
+
+{/* TODO: Screenshot - Enriched contact showing populated fields */}
+<Frame caption="Screenshot: Enriched contact showing populated fields">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Creating Custom Enrichment Templates
+
+Create reusable enrichment templates for specific research needs:
+
+<Steps>
+  <Step title="Open Enrichment Settings">
+    Click **Columns** → **Add Column** → **Enrichment**
+    
+    {/* TODO: Screenshot - Add enrichment column option */}
+<Frame caption="Screenshot: Add enrichment column option">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Configure Template">
+    Set the following:
+    - **Name**: Column name (e.g., "Company Summary")
+    - **Objective**: What to research (e.g., "Find a brief summary of what this company does")
+    - **Output format**: How to structure results
+    - **Iterations**: Research depth (1-10)
+    
+    {/* TODO: Screenshot - Enrichment template configuration modal */}
+<Frame caption="Screenshot: Enrichment template configuration modal">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Save">
+    Click **Create** to add the enrichment column
+  </Step>
+</Steps>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start with Email">
+    Email addresses are the most reliable starting point for enrichment. Ensure accurate emails for best results.
+  </Accordion>
+  
+  <Accordion title="Enrich in Batches">
+    Enrich contacts in batches to monitor quality and catch any issues early.
+  </Accordion>
+  
+  <Accordion title="Review Before Outreach">
+    Spot-check enriched data before using it in outreach campaigns.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="No data found">
+    - Verify email address is correct
+    - Company may be too small or private
+    - Try running enrichment again
+  </Accordion>
+  
+  <Accordion title="Incorrect data">
+    - Manually correct the field
+    - Report the issue for data quality improvement
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Research Agent" icon="robot" href="/data/research-agent">
+    Go deeper with AI-powered research
+  </Card>
+  <Card title="Custom Columns" icon="table-columns" href="/contacts/columns">
+    Create columns for enriched data
+  </Card>
+</CardGroup>

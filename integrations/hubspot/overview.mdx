@@ -1,0 +1,184 @@
+---
+title: "HubSpot Integration"
+description: "Sync your contacts and automate link generation with HubSpot CRM"
+icon: "hubspot"
+---
+
+Connect Pockla with HubSpot to import contacts and automate personalized link generation through HubSpot workflows.
+
+{/* TODO: Video - HubSpot integration overview (45-60 seconds showing connection and key features) */}
+<Frame caption="Video: HubSpot integration overview (45-60 seconds showing connection and key features)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+## Overview
+
+The HubSpot integration provides:
+
+- **Contact import**: Pull contacts from HubSpot into Pockla
+- **Workflow actions**: Generate personalized Pockla links automatically from HubSpot workflows (via the `automation` scope)
+
+<Note>
+Write access to store generated link URLs back on HubSpot contact records is coming soon.
+</Note>
+
+## Prerequisites
+
+Before connecting:
+
+- HubSpot account (Free, Starter, Professional, or Enterprise)
+- Admin access in HubSpot (or sufficient permissions to authorize apps)
+- Pockla account
+
+## Connecting HubSpot
+
+<Steps>
+  <Step title="Navigate to Integrations">
+    Go to **Settings** → **Integrations** → **HubSpot**
+    
+    {/* TODO: Screenshot - Settings > Integrations page showing HubSpot card */}
+<Frame caption="Screenshot: Settings > Integrations page showing HubSpot card">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Click Connect">
+    Click **Connect HubSpot**
+    
+    {/* TODO: Screenshot - Connect HubSpot button */}
+<Frame caption="Screenshot: Connect HubSpot button">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Authorize">
+    You'll be redirected to HubSpot to sign in and authorize Pockla. Review the requested permissions and click **Connect app**.
+    
+    {/* TODO: Screenshot - HubSpot OAuth authorization screen */}
+<Frame caption="Screenshot: HubSpot OAuth authorization screen">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Done">
+    You're connected! You can now import contacts and use Pockla as a workflow action.
+    
+    {/* TODO: Screenshot - Connected state showing portal info */}
+<Frame caption="Screenshot: Connected state showing portal info">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+</Steps>
+
+## Key Features
+
+### Importing Contacts
+
+Import existing HubSpot contacts into Pockla:
+
+1. Go to **Contacts** → **Import**
+2. Select **HubSpot** as the source
+3. Choose a list or filter criteria
+4. Map fields
+5. Import
+
+{/* TODO: Screenshot - HubSpot import flow with list selection */}
+<Frame caption="Screenshot: HubSpot import flow with list selection">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Workflow Integration
+
+The most powerful feature is generating Pockla links from HubSpot workflows. The `automation` scope allows you to add Pockla link generation as a custom action in your HubSpot workflows:
+
+1. Create a Link Set in Pockla configured for workflow activation
+2. In HubSpot, add the **Generate Pockla Link** action to any workflow
+3. Select your Link Set
+4. Contacts entering the workflow automatically get personalized pages generated
+
+{/* TODO: Screenshot - HubSpot workflow with Pockla action */}
+<Frame caption="Screenshot: HubSpot workflow with Pockla action">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+See [Workflow Integration](/links/workflow-integration) for detailed setup.
+
+### Field Mapping
+
+Default field mappings when importing:
+
+| Pockla Field | HubSpot Property |
+|--------------|------------------|
+| Email | email |
+| First Name | firstname |
+| Last Name | lastname |
+| Company | company |
+| Title | jobtitle |
+| Phone | phone |
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Contacts not importing">
+    - Verify connection is active in Settings → Integrations → HubSpot
+    - Check field mappings
+    - Ensure HubSpot permissions are correct
+  </Accordion>
+  
+  <Accordion title="Workflow action not appearing">
+    - Check that HubSpot is connected in Pockla
+    - Verify you have workflow permissions in HubSpot
+    - Try refreshing the workflow editor
+  </Accordion>
+  
+  <Accordion title="Permission errors">
+    - Reconnect with an admin account
+    - Verify HubSpot user permissions
+  </Accordion>
+  
+  <Accordion title="Connection expired">
+    OAuth connections may expire. Go to Settings → Integrations → HubSpot and click **Reconnect**.
+  </Accordion>
+</AccordionGroup>
+
+## Data Privacy & Security
+
+- Data is encrypted in transit (HTTPS)
+- OAuth 2.0 for secure authentication
+- Pockla does not store HubSpot credentials—only OAuth tokens
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Install HubSpot App" icon="download" href="/integrations/hubspot/installation">
+    Details on permissions and setup
+  </Card>
+  <Card title="Workflow Integration" icon="arrows-rotate" href="/links/workflow-integration">
+    Automate link generation
+  </Card>
+</CardGroup>

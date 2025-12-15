@@ -1,0 +1,100 @@
+---
+title: "Shopify Installation"
+description: "Add Pockla personalization to your Shopify store"
+icon: "shopify"
+---
+
+Adding the Pockla personalization script to your Shopify store's `<head>` section is straightforward. Follow the steps below.
+
+## Step 1: Open the Code Editor
+
+<Steps>
+  <Step title="Go to Online Store > Themes">
+    From your Shopify admin, navigate to **Online Store** → **Themes**
+  </Step>
+  
+  <Step title="Edit Code">
+    Find your current theme and click **Actions** → **Edit Code**
+    
+    {/* TODO: Screenshot of Shopify theme actions menu */}
+  </Step>
+</Steps>
+
+## Step 2: Add Your Code
+
+Copy the Pockla script:
+
+```html
+<script src="https://cdn.pockla.io/pockla.min.js"></script>
+```
+
+<Steps>
+  <Step title="Find theme.liquid">
+    In the left sidebar, find **theme.liquid** under the **Layout** folder
+  </Step>
+  
+  <Step title="Search for <head>">
+    Press **CMD+F** (Mac) or **CTRL+F** (Windows) and search for `<head>`
+  </Step>
+  
+  <Step title="Paste the script">
+    Paste the Pockla script on the line directly after `<head>`
+    
+    ```html
+    <head>
+      <script src="https://cdn.pockla.io/pockla.min.js"></script>
+      
+      <!-- Rest of your head content -->
+    ```
+  </Step>
+  
+  <Step title="Save">
+    Click **Save** in the top right
+    
+    <Warning>
+    Be careful not to delete any existing code—even a single bracket can break your theme.
+    </Warning>
+  </Step>
+</Steps>
+
+{/* TODO: Screenshot of theme.liquid with script added */}
+
+<Note>
+Shopify may display a warning about loading the script synchronously. This is expected—our anti-flicker functionality requires synchronous loading. You can add `async` or `defer`, but this may cause a flash of unpersonalized content.
+</Note>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How big is the Pockla script?">
+    Less than 4KB when gzipped—extremely lightweight. It won't significantly impact your store's load time.
+  </Accordion>
+  
+  <Accordion title="Where is the script served from?">
+    The script is served via a global CDN, ensuring fast delivery regardless of your customers' location.
+  </Accordion>
+  
+  <Accordion title="Will this affect my store's performance?">
+    No. The script is highly optimized. At less than 4KB gzipped, the overhead is negligible.
+    
+    For additional performance tuning, you can add `defer` or `async` attributes, but this may disable anti-flicker and cause a flash of default content.
+  </Accordion>
+  
+  <Accordion title="Is my data safe?">
+    Yes. Pockla is designed with security and privacy in mind. The script only loads personalization features you've configured.
+  </Accordion>
+  
+  <Accordion title="Can I use Google Tag Manager instead?">
+    We don't recommend GTM for Pockla. GTM loads scripts with a delay, causing flicker. Install directly in theme.liquid for the best experience.
+  </Accordion>
+  
+  <Accordion title="Can I remove the script later?">
+    Yes. Go back to theme.liquid, delete the Pockla script line, and click Save.
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+<Card title="Contact Support" icon="headset" href="mailto:support@pockla.io">
+  Get help with Shopify installation
+</Card>

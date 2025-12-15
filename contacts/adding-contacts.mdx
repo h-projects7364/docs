@@ -1,0 +1,309 @@
+---
+title: "Adding Contacts"
+description: "Import and create contacts in Pockla"
+icon: "user-plus"
+---
+
+
+Pockla provides multiple ways to add contacts to your workspace—from individual manual entry to bulk CSV imports.
+
+{/* TODO: Screenshot - Contacts page overview showing table with contacts */}
+<Frame caption="Screenshot: Contacts page overview showing table with contacts">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Manual Entry
+
+Add contacts one at a time directly in the app. This is ideal for quickly adding new leads as you encounter them.
+
+<Steps>
+  <Step title="Open the Contact Modal">
+    From the **Contacts** page, click the **Contact** button in the toolbar.
+    
+    {/* TODO: Screenshot - Add contact modal with empty form fields */}
+<Frame caption="Screenshot: Add contact modal with empty form fields">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Enter Contact Details">
+    Fill in the contact information:
+    
+    | Field | Required | Description |
+    |-------|----------|-------------|
+    | **Email** | Yes | The contact's email address (used as primary identifier) |
+    | **First Name** | No | Contact's first name |
+    | **Last Name** | No | Contact's last name |
+    | **Company** | No | Organization or company name |
+    | **Job Title** | No | Role or position |
+    | **Phone** | No | Phone number in any format |
+  </Step>
+  
+  <Step title="Create the Contact">
+    Click **Create Contact**. The contact will be added immediately and appear in your contacts table.
+  </Step>
+</Steps>
+
+<Tip>
+After creating a contact from the contacts page, you'll stay on the contacts page with the list refreshed. When creating from a board, you'll be taken directly to that contact's board view.
+</Tip>
+
+## CSV Import
+
+Import multiple contacts at once using a CSV file. This is the fastest way to bulk-add contacts from spreadsheets, exports from other tools, or purchased lists.
+
+{/* TODO: Video - CSV import flow walkthrough (45-60 seconds showing upload, mapping, and import) */}
+<Frame caption="Video: CSV import flow walkthrough (45-60 seconds showing upload, mapping, and import)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+### Preparing Your CSV
+
+Your CSV file should include headers in the first row. Pockla recognizes these standard column names:
+
+| Column Name | Maps To | Notes |
+|-------------|---------|-------|
+| `email` | Email | **Required** - primary identifier |
+| `first_name` or `firstName` | First Name | |
+| `last_name` or `lastName` | Last Name | |
+| `company` | Company | |
+| `job_title` or `jobTitle` or `title` | Job Title | |
+| `phone` | Phone | |
+| `notes` | Notes | |
+
+<Accordion title="Sample CSV Format">
+```csv
+email,first_name,last_name,company,job_title,phone
+john@acme.com,John,Smith,Acme Corp,Sales Director,+1 555 123 4567
+jane@startup.io,Jane,Doe,Startup Inc,CEO,
+mike@bigco.com,Mike,Johnson,BigCo,VP Marketing,+44 20 7946 0958
+```
+</Accordion>
+
+### Import Steps
+
+<Steps>
+  <Step title="Navigate to Contacts">
+    Go to **Contacts** from the sidebar navigation.
+  </Step>
+  
+  <Step title="Click Import">
+    Click the **Import** button in the toolbar.
+    
+    {/* TODO: Screenshot - Contacts header showing Import button highlighted */}
+<Frame caption="Screenshot: Contacts header showing Import button highlighted">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Upload Your File">
+    Drag and drop your CSV file, or click to browse and select it.
+    
+    {/* TODO: Screenshot - CSV upload dropzone */}
+<Frame caption="Screenshot: CSV upload dropzone">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Map Columns">
+    Pockla will attempt to auto-match your CSV columns to contact fields. Review and adjust any mappings that weren't detected correctly.
+    
+    - Green checkmarks indicate matched columns
+    - Use dropdowns to manually map unrecognized columns
+    - Skip columns you don't want to import
+    
+    {/* TODO: Screenshot - Column mapping interface with dropdowns */}
+<Frame caption="Screenshot: Column mapping interface with dropdowns">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Review and Confirm">
+    Preview the data that will be imported. Check for any issues or formatting problems, then click **Import**.
+    
+    {/* TODO: Screenshot - Import preview showing sample rows */}
+<Frame caption="Screenshot: Import preview showing sample rows">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+</Steps>
+
+### Handling Duplicates
+
+Pockla uses **email address** as the unique identifier for contacts:
+
+- **New emails**: Creates a new contact
+- **Existing emails**: Updates the existing contact with new data
+- **Empty fields**: Won't overwrite existing data (only fills in blanks)
+
+<Warning>
+Contacts without a valid email address will be skipped during import.
+</Warning>
+
+## Contact Fields
+
+### Standard Fields
+
+Every contact in Pockla has these built-in fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| Email | String | Primary identifier (**required**) |
+| First Name | String | Contact's first name |
+| Last Name | String | Contact's last name |
+| Company | String | Company or organization |
+| Job Title | String | Role or position |
+| Phone | String | Phone number |
+| Notes | Text | Free-form notes |
+| Status | Select | Lead, Prospect, Customer, or Churned |
+| Created | Date | When the contact was added |
+
+### Contact Status
+
+Every contact can have a status to track where they are in your pipeline:
+
+<CardGroup cols={4}>
+  <Card title="Lead" icon="circle" iconType="solid" color="#3B82F6">
+    New contacts, not yet qualified
+  </Card>
+  <Card title="Prospect" icon="circle" iconType="solid" color="#8B5CF6">
+    Qualified, actively working
+  </Card>
+  <Card title="Customer" icon="circle" iconType="solid" color="#22C55E">
+    Converted customers
+  </Card>
+  <Card title="Churned" icon="circle" iconType="solid" color="#6B7280">
+    Former customers
+  </Card>
+</CardGroup>
+
+### Enrichment Columns
+
+When you create enrichment templates (AI-powered research), they appear as additional columns in your contacts table. These columns show:
+
+- **—** No data yet
+- **Generating** (with spinner) Research in progress  
+- **Preview text** Completed research (click to view full content)
+- **Error icon** Generation failed (can retry)
+
+{/* TODO: Screenshot - Contacts table showing enrichment column with different states */}
+<Frame caption="Screenshot: Contacts table showing enrichment column with different states">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+See [Enriching Data](/data/enriching-data) to learn more about adding enrichment columns.
+
+## Bulk Actions
+
+After importing or selecting contacts, you can perform actions on multiple contacts at once:
+
+| Action | Description |
+|--------|-------------|
+| **Add to List** | Add selected contacts to a new or existing list |
+| **Create Links** | Generate personalized link sets for selected contacts |
+| **Run Enrichment** | Execute AI research on selected contacts |
+| **Delete** | Permanently remove selected contacts |
+
+{/* TODO: Screenshot - Selection bar at bottom of contacts table showing bulk action buttons */}
+<Frame caption="Screenshot: Selection bar at bottom of contacts table showing bulk action buttons">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+<Steps>
+  <Step title="Select Contacts">
+    Use the checkboxes in the leftmost column to select contacts. Click the header checkbox to select all visible contacts.
+  </Step>
+  
+  <Step title="Choose Action">
+    A selection bar appears at the bottom showing the count of selected contacts and available actions.
+  </Step>
+  
+  <Step title="Confirm">
+    Complete the action dialog (e.g., choose a list name) and confirm.
+  </Step>
+</Steps>
+
+## Filtering and Sorting
+
+### Filter by List
+
+Use the dropdown in the header to filter contacts by list membership:
+
+- **All Contacts**: Show everyone
+- **Specific List**: Show only contacts in that list
+
+{/* TODO: Screenshot - List filter dropdown in contacts header */}
+<Frame caption="Screenshot: List filter dropdown in contacts header">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Sort Columns
+
+Click any sortable column header to sort:
+
+- **Email**: Alphabetical
+- **Company**: Alphabetical
+- **Contact**: By name
+- **Title**: Alphabetical  
+- **Status**: By status type
+- **Created**: By date added
+
+Click again to reverse the sort order (ascending ↔ descending).
+
+### Search
+
+<Note>
+Full-text search across contacts is coming soon.
+</Note>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Customize Columns" icon="table-columns" href="/contacts/columns">
+    Add custom fields and enrichment columns to your table
+  </Card>
+  <Card title="Create Lists" icon="list" href="/contacts/lists">
+    Organize contacts into targeted segments
+  </Card>
+  <Card title="Enrich Data" icon="sparkles" href="/data/enriching-data">
+    Automatically research and enrich contact information
+  </Card>
+  <Card title="Create a Board" icon="table-columns" href="/boards/introduction">
+    Visualize contacts in a pipeline view
+  </Card>
+</CardGroup>

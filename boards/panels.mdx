@@ -1,0 +1,180 @@
+---
+title: "Board Panels"
+description: "Customize your boards with contextual panels"
+icon: "sidebar"
+---
+
+Panels extend your board's functionality by providing contextual information and actions in a side panel view.
+
+{/* TODO: Screenshot - Board showing multiple panel types */}
+<Frame caption="Screenshot: Board showing multiple panel types">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## What Are Panels?
+
+Panels are modular components that display alongside your board:
+
+- View detailed contact information
+- Take notes and add context
+- View and send emails
+- Chat with the AI Board Agent
+
+## Available Panel Types
+
+### Notes Panel
+
+Add and view notes for contacts.
+
+**Features:**
+- Rich text notes
+- Timestamped entries
+- Persistent across sessions
+
+{/* TODO: Screenshot - Notes panel with note entry form */}
+<Frame caption="Screenshot: Notes panel with note entry form">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Emails Panel
+
+View email history and create drafts for contacts.
+
+**Features:**
+- See emails exchanged with contact's company domain
+- Create new email drafts
+- Reply to existing threads
+- Opens in Gmail for sending
+
+{/* TODO: Screenshot - Emails panel showing email list and compose */}
+<Frame caption="Screenshot: Emails panel showing email list and compose">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+Requires [Gmail Integration](/integrations/gmail/overview).
+
+### Profile Panel
+
+AI-generated insights about the contact and their company.
+
+**Features:**
+- Company research summaries
+- Contact background
+- Key information at a glance
+
+{/* TODO: Screenshot - Profile panel with contact details */}
+<Frame caption="Screenshot: Profile panel with contact details">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Company Panel
+
+Detailed company information pulled from your onboarding analysis and enrichments.
+
+{/* TODO: Screenshot - Company panel with company details */}
+<Frame caption="Screenshot: Company panel with company details">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Board Agent Chat
+
+Chat with the AI assistant to research contacts, draft emails, and get insights.
+
+**Capabilities:**
+- Research the contact's company
+- Read and summarize email history
+- Draft personalized emails
+- Search the web for information
+- Take notes
+
+{/* TODO: Video - Board Agent conversation showing research and email drafting (60 seconds) */}
+<Frame caption="Video: Board Agent conversation showing research and email drafting (60 seconds)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+{/* TODO: Screenshot - Board Agent chat with example prompts */}
+<Frame caption="Screenshot: Board Agent chat with example prompts">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Using Panels
+
+### Opening Panels
+
+1. Click on a contact card on the board
+2. The detail view opens with panel tabs
+3. Click panel tabs to switch between views
+
+{/* TODO: Screenshot - Panel tab navigation */}
+<Frame caption="Screenshot: Panel tab navigation">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Adding Panels
+
+1. Click the **+** button in the panel tabs
+2. Select the panel type to add
+3. Panel is added to the contact view
+
+{/* TODO: Screenshot - Add panel button and dropdown */}
+<Frame caption="Screenshot: Add panel button and dropdown">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Panel Navigation
+
+Navigate between different panels by clicking the tabs at the top of the panel area.
+
+## Tips & Best Practices
+
+<AccordionGroup>
+  <Accordion title="Research Workflow">
+    1. Click contact to open detail view
+    2. Use Board Agent to research the company
+    3. Switch to Notes to capture key points
+    4. Use Board Agent to draft a personalized email
+    5. Review draft in Emails panel
+  </Accordion>
+  
+  <Accordion title="Quick Email Context">
+    Before reaching out, check the Emails panel to see recent conversation history with the contact's company.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Gmail Integration" icon="envelope" href="/integrations/gmail/overview">
+    Connect Gmail to enable the Emails panel
+  </Card>
+  <Card title="Research Agent" icon="robot" href="/data/research-agent">
+    Learn about AI-powered research
+  </Card>
+</CardGroup>

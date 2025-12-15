@@ -1,0 +1,170 @@
+---
+title: "Quickstart"
+description: "Get up and running with Pockla in 5 minutes"
+icon: "rocket"
+---
+
+Four steps to your first personalized outreach campaign.
+
+{/* TODO: Video - End-to-end quickstart walkthrough (2-3 minutes covering all 4 steps) */}
+<Frame caption="Video: End-to-end quickstart walkthrough (2-3 minutes covering all 4 steps)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+## Step 1: Connect Data
+
+Import the contacts you want to create pages for.
+
+<Tabs>
+  <Tab title="CSV Import">
+    1. Click **Upload CSV** from Quick Actions on your dashboard
+    2. Upload your spreadsheet
+    3. Map columns to Pockla fields (email, name, company, etc.)
+    4. Review and click **Import**
+    
+    {/* TODO: Screenshot - CSV import flow showing column mapping interface */}
+<Frame caption="Screenshot: CSV import flow showing column mapping interface">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+    
+    <Tip>
+    Include at least an email column. Company name and contact name improve personalization.
+    </Tip>
+  </Tab>
+  
+  <Tab title="HubSpot">
+    1. Click **Import from HubSpot** from Quick Actions
+    2. Connect your HubSpot account
+    3. Select contacts or lists to import
+    4. Click **Import**
+    
+    {/* TODO: Screenshot - HubSpot import flow showing list selection */}
+<Frame caption="Screenshot: HubSpot import flow showing list selection">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+    
+    See [HubSpot Integration](/integrations/hubspot/overview) for full setup.
+  </Tab>
+  
+  <Tab title="Manual">
+    1. Go to **Contacts** in the sidebar
+    2. Click **Add Contact**
+    3. Enter contact details
+    4. Click **Save**
+    
+    {/* TODO: Screenshot - Add contact modal with form fields */}
+<Frame caption="Screenshot: Add contact modal with form fields">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Tab>
+</Tabs>
+
+## Step 2: Generate Links
+
+Create a Link Set—a collection of personalized pages, one per contact.
+
+1. Click **Create Link Set** from Quick Actions
+2. Choose your source:
+   - **From a List** – Select an existing list
+   - **Select Contacts** – Pick individual contacts
+3. Enter the URL of the page you want to personalize
+4. Use the AI chat to configure which elements to personalize
+5. Preview how pages will look for different contacts
+
+{/* TODO: Video - Link Set creation flow (60-90 seconds showing URL entry, element selection, and preview) */}
+<Frame caption="Video: Link Set creation flow (60-90 seconds showing URL entry, element selection, and preview)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+{/* TODO: Screenshot - Link Set configuration page showing URL input and AI chat panel */}
+<Frame caption="Screenshot: Link Set configuration page showing URL input and AI chat panel">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Step 3: Install Snippet
+
+Add the Pockla tracking snippet to capture engagement data.
+
+```html
+<script src="https://cdn.pockla.io/pockla.min.js"></script>
+```
+
+The snippet tracks:
+- Page views and time on page
+- Scroll depth
+- Link clicks
+- Form submissions
+
+See [JavaScript Snippet Installation](/integrations/js-snippet/installation) for detailed setup.
+
+<Note>
+You can skip this step initially, but you won't see engagement analytics until it's installed.
+</Note>
+
+## Step 4: Publish
+
+Make your personalized pages live.
+
+1. Review your Link Set in the preview
+2. Click **Publish**
+3. Each contact gets a unique URL (e.g., `pages.pockla.io/abc123`)
+4. Share links via email, LinkedIn, or your outreach tool
+
+{/* TODO: Screenshot - Link Set instances view showing generated URLs and publish button */}
+<Frame caption="Screenshot: Link Set instances view showing generated URLs and publish button">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+Once published, you can:
+- Track views in real-time
+- See engagement metrics per contact
+- Push data back to HubSpot (if connected)
+
+{/* TODO: Screenshot - Link Set analytics view showing engagement metrics */}
+<Frame caption="Screenshot: Link Set analytics view showing engagement metrics">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## What's Next?
+
+<CardGroup cols={2}>
+  <Card title="Research Agent" icon="robot" href="/data/research-agent">
+    Get AI-powered insights on your contacts
+  </Card>
+  <Card title="Boards" icon="table-columns" href="/boards/introduction">
+    Visual pipeline view with AI research panels
+  </Card>
+  <Card title="Data Enrichment" icon="sparkles" href="/data/enriching-data">
+    Auto-fill missing contact information
+  </Card>
+  <Card title="HubSpot Sync" icon="arrows-rotate" href="/integrations/hubspot/overview">
+    Push engagement data to your CRM
+  </Card>
+</CardGroup>

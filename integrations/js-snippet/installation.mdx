@@ -1,0 +1,123 @@
+---
+title: "JavaScript Snippet"
+description: "Add personalization to your website with a single script"
+icon: "code"
+---
+
+The Pockla script enables personalized content on your website. Add it once, and Pockla handles the rest.
+
+{/* TODO: Video - Quick snippet installation overview (30 seconds) */}
+<Frame caption="Video: Quick snippet installation overview (30 seconds)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+## The Script
+
+```html
+<script src="https://cdn.pockla.io/pockla.min.js"></script>
+```
+
+That's it. One line in your `<head>` section.
+
+{/* TODO: Screenshot - Script tag in HTML head */}
+<Frame caption="Screenshot: Script tag in HTML head">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Choose Your Platform
+
+<CardGroup cols={2}>
+  <Card title="Standard HTML" icon="code" href="/integrations/js-snippet/standard">
+    Any website with HTML access
+  </Card>
+  <Card title="Shopify" icon="shopify" href="/integrations/js-snippet/shopify">
+    Shopify stores
+  </Card>
+  <Card title="Webflow" icon="webflow" href="/integrations/js-snippet/webflow">
+    Webflow sites
+  </Card>
+  <Card title="WordPress" icon="wordpress" href="/integrations/js-snippet/wordpress">
+    WordPress sites
+  </Card>
+</CardGroup>
+
+## What the Script Does
+
+The Pockla script:
+
+- **Personalizes content** – Dynamically updates page content based on who's viewing
+- **Tracks engagement** – Records page views, time on page, and interactions
+- **Identifies visitors** – Connects anonymous visits to known contacts
+- **Prevents flicker** – Anti-flicker technology ensures smooth personalization
+
+{/* TODO: Diagram - How the script works flow */}
+<Frame caption="Diagram: How the script works flow">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Diagram placeholder]
+  </div>
+</Frame>
+
+
+## Script Details
+
+| Property | Value |
+|----------|-------|
+| Size | Less than 4KB gzipped |
+| Delivery | Global CDN for fast loading |
+| Loading | Synchronous (for anti-flicker) |
+
+<Note>
+The script is designed to load synchronously to prevent a "flash of unpersonalized content." If you add `async` or `defer`, the anti-flicker feature will be disabled.
+</Note>
+
+## Verifying Installation
+
+After adding the script:
+
+1. Open your website in a browser
+2. Open Developer Tools (F12 or right-click → Inspect)
+3. Go to the **Network** tab
+4. Reload the page
+5. Search for "pockla" - you should see the script loading
+
+{/* TODO: Screenshot - Developer tools showing Pockla script loaded */}
+<Frame caption="Screenshot: Developer tools showing Pockla script loaded">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Will this slow down my site?">
+    No. At less than 4KB gzipped, the script is extremely lightweight. It's served from a global CDN, so visitors download from a server near them.
+  </Accordion>
+  
+  <Accordion title="Is my data safe?">
+    Yes. Pockla is designed with security and privacy in mind. The script only loads personalization features you've configured and reviewed.
+  </Accordion>
+  
+  <Accordion title="Can I use Google Tag Manager?">
+    We don't recommend GTM for Pockla. GTM loads scripts with a delay, causing flicker (a flash of unpersonalized content). Install directly in your `<head>` for the best experience.
+  </Accordion>
+  
+  <Accordion title="Can I remove the script later?">
+    Yes. Simply delete the script tag from your site and the personalization stops immediately.
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+If you run into issues during installation, contact our support team.
+
+<Card title="Contact Support" icon="headset" href="mailto:support@pockla.io">
+  Get help with installation
+</Card>

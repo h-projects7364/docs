@@ -1,0 +1,209 @@
+---
+title: "Adding Email to Boards"
+description: "View email history and draft messages from your boards"
+icon: "envelope"
+---
+
+The Emails panel in Boards lets you see email history with contacts and draft new messages—all without leaving Pockla.
+
+{/* TODO: Video - Email panel walkthrough showing view and compose (45-60 seconds) */}
+<Frame caption="Video: Email panel walkthrough showing view and compose (45-60 seconds)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+## How It Works
+
+Email in Boards is powered by the [Gmail Integration](/integrations/gmail/overview). Once connected:
+
+1. **View history** – See all emails exchanged with the contact's company domain
+2. **Create drafts** – Write new emails or replies
+3. **AI assistance** – Let the Board Agent draft contextual emails for you
+
+<Note>
+Emails are created as drafts in your Gmail. You review and send from Gmail—Pockla doesn't send emails directly.
+</Note>
+
+## Setting Up Email
+
+### Connect Gmail
+
+<Steps>
+  <Step title="Open a Board">
+    Navigate to **Boards** and open any board
+  </Step>
+  
+  <Step title="Click a Contact">
+    Click on a contact card to open the detail view
+  </Step>
+  
+  <Step title="Open Emails Panel">
+    Click the **Emails** tab in the panel area
+    
+    {/* TODO: Screenshot - Emails tab in panel navigation */}
+<Frame caption="Screenshot: Emails tab in panel navigation">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Connect Gmail">
+    Click **Connect Gmail** and authorize with your Google account
+    
+    {/* TODO: Screenshot - Connect Gmail prompt */}
+<Frame caption="Screenshot: Connect Gmail prompt">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+</Steps>
+
+Once connected, the Emails panel shows your email history with that contact's company.
+
+## Using the Emails Panel
+
+### Viewing Emails
+
+The panel shows all emails exchanged with the contact's **company domain**. For a contact at `john@acme.com`, you'll see all your emails to/from `@acme.com`.
+
+Each email shows:
+- Direction (sent or received)
+- Date
+- Subject line
+- Preview snippet
+
+{/* TODO: Screenshot - Email list showing multiple emails */}
+<Frame caption="Screenshot: Email list showing multiple emails">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+Click an email to see the full content.
+
+{/* TODO: Screenshot - Expanded email view */}
+<Frame caption="Screenshot: Expanded email view">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Email Actions
+
+| Action | Description |
+|--------|-------------|
+| **Copy** | Copy email body to clipboard |
+| **Open in Gmail** | View/edit the email in Gmail |
+
+## Creating Emails with the Board Agent
+
+The Board Agent can draft emails using contact context, company research, and email history.
+
+{/* TODO: Video - Board Agent drafting an email (30-45 seconds) */}
+<Frame caption="Video: Board Agent drafting an email (30-45 seconds)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+### Draft a New Email
+
+Ask the agent:
+
+> "Draft an introductory email to John about our analytics platform"
+
+> "Write a follow-up email mentioning our conversation about their Q2 goals"
+
+{/* TODO: Screenshot - Board Agent with email draft prompt */}
+<Frame caption="Screenshot: Board Agent with email draft prompt">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+### Reply to a Thread
+
+Ask the agent to reply to existing conversations:
+
+> "Reply to the latest email thread about pricing"
+
+> "Draft a response to their question about integrations"
+
+### How It Works
+
+1. Agent creates a draft in your Gmail
+2. Draft appears in the Emails panel
+3. Click to open in Gmail
+4. Review, edit if needed, and send
+
+{/* TODO: Screenshot - Draft in Emails panel with "Open in Gmail" button */}
+<Frame caption="Screenshot: Draft in Emails panel with 'Open in Gmail' button">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+<Tip>
+The more data you have on the contact (enrichments, notes, email history), the better the agent's drafts will be.
+</Tip>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Check history before reaching out">
+    Review the Emails panel before drafting. The agent can reference past conversations, but you should know the context too.
+  </Accordion>
+  
+  <Accordion title="Review AI drafts">
+    Always review agent-drafted emails before sending. The AI provides a starting point—add your personal touch.
+  </Accordion>
+  
+  <Accordion title="Use for warm outreach">
+    Email from Boards works best for contacts you have context on. For cold outreach at scale, use [Link Sets](/links/introduction).
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="No emails showing">
+    - Ensure the contact has an email address with a company domain
+    - Personal emails (gmail.com, outlook.com) won't match company emails
+    - Check that Gmail is connected (may need to reconnect if token expired)
+  </Accordion>
+  
+  <Accordion title="Can't connect Gmail">
+    - Ensure popups aren't blocked
+    - Try a different browser
+    - Check that you're signing in with the correct Google account
+  </Accordion>
+  
+  <Accordion title="Drafts not appearing in Gmail">
+    - Drafts may take a few seconds to sync
+    - Check your Gmail Drafts folder directly
+    - Ensure you authorized compose permissions
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Gmail Integration" icon="envelope" href="/integrations/gmail/overview">
+    Full Gmail integration documentation
+  </Card>
+  <Card title="Board Panels" icon="sidebar" href="/boards/panels">
+    Learn about all available panels
+  </Card>
+</CardGroup>

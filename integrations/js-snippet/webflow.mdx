@@ -1,0 +1,81 @@
+---
+title: "Webflow Installation"
+description: "Add Pockla personalization to your Webflow site"
+icon: "webflow"
+---
+
+Adding the Pockla personalization script to your Webflow site's `<head>` section is straightforward. Follow the steps below.
+
+## Step 1: Open Site Settings
+
+In your Webflow Designer, click the **gear icon** in the left sidebar to open **Site Settings**, then select the **Custom Code** tab.
+
+{/* TODO: Screenshot of Webflow site settings */}
+
+## Step 2: Paste the Script
+
+Copy the Pockla script:
+
+```html
+<script src="https://cdn.pockla.io/pockla.min.js"></script>
+```
+
+In the Custom Code tab, find the **Head code** section (the first input field). Paste the script into the Head code field.
+
+This adds the script before the closing `</head>` tag on all pages of your site.
+
+{/* TODO: Screenshot of Webflow custom code section */}
+
+<Note>
+Webflow may suggest adding `async` or `defer` attributes. Our anti-flicker functionality works best with synchronous loading. You can add these attributes if needed, but it may cause a brief flash of unpersonalized content.
+</Note>
+
+## Step 3: Save and Publish
+
+<Steps>
+  <Step title="Save Changes">
+    Click **Save changes** in the Custom Code settings
+  </Step>
+  
+  <Step title="Publish">
+    Click **Publish** in the top right of the Designer to make the script live
+  </Step>
+</Steps>
+
+<Warning>
+Custom code changes in Webflow only appear in preview mode until you publish. The Pockla script will not work for visitors until you publish your site.
+</Warning>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How big is the Pockla script?">
+    Less than 4KB when gzipped—extremely lightweight. It won't impact your site's load time.
+  </Accordion>
+  
+  <Accordion title="Where is the script served from?">
+    The script is served via a global CDN, ensuring fast delivery regardless of your visitors' location.
+  </Accordion>
+  
+  <Accordion title="Will this affect my site's performance?">
+    No. The script is highly optimized and the overhead is negligible.
+  </Accordion>
+  
+  <Accordion title="Is my data safe?">
+    Yes. Pockla only loads personalization features you've configured and reviewed.
+  </Accordion>
+  
+  <Accordion title="Can I add it to specific pages only?">
+    Yes. Instead of using Site Settings, you can add the script to individual pages via Page Settings → Custom Code → Head code.
+  </Accordion>
+  
+  <Accordion title="Can I remove the script later?">
+    Yes. Go back to Site Settings → Custom Code, delete the script from Head code, save, and publish.
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+<Card title="Contact Support" icon="headset" href="mailto:support@pockla.io">
+  Get help with Webflow installation
+</Card>

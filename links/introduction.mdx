@@ -1,0 +1,203 @@
+---
+title: "Links Overview"
+description: "Create personalized web pages for your contacts"
+icon: "link"
+---
+
+Links in Pockla are personalized web pages—one for each contact. You select a page from your website, choose elements to personalize, and Pockla generates a unique version for every contact using AI.
+
+{/* TODO: Video - Overview of Links concept (30-45 seconds showing a personalized page in action) */}
+<Frame caption="Video: Overview of Links concept (30-45 seconds showing a personalized page in action)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+## How It Works
+
+1. **Choose a source page** – Any page on your website
+2. **Select elements to personalize** – Headlines, paragraphs, CTAs, etc.
+3. **Write prompts** – Tell the AI how to personalize each element
+4. **Generate** – Pockla creates a unique page for each contact
+5. **Publish** – Each contact gets their own URL
+
+{/* TODO: Diagram - Visual flow from source page to personalized pages */}
+<Frame caption="Diagram: Visual flow from source page to personalized pages">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Diagram placeholder]
+  </div>
+</Frame>
+
+
+## What Gets Personalized
+
+You can personalize any text element on your page:
+
+| Element Type | Example Use |
+|--------------|-------------|
+| **Headlines (H1-H3)** | "Welcome, {{company}} team" |
+| **Paragraphs** | Tailored value propositions |
+| **CTAs / Buttons** | "Start your {{company}} trial" |
+| **List items** | Industry-specific benefits |
+
+The AI uses contact data (name, company, job title) plus any enrichments you've added to generate relevant content.
+
+## Two Ways to Create Links
+
+<CardGroup cols={2}>
+  <Card title="Run for Contacts" icon="users" href="/links/running-for-contacts">
+    Select contacts from your database and generate pages for all of them at once. Best for campaigns and outreach lists.
+  </Card>
+  <Card title="Workflow Integration" icon="arrows-rotate" href="/links/workflow-integration">
+    Connect to HubSpot workflows. Pages generate automatically when contacts enter the workflow.
+  </Card>
+</CardGroup>
+
+## Creating a Link Set
+
+A Link Set is your template—the page configuration and prompts. From one Link Set, you generate individual pages (instances) for each contact.
+
+{/* TODO: Video - Complete Link Set creation flow (90-120 seconds) */}
+<Frame caption="Video: Complete Link Set creation flow (90-120 seconds)">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Video placeholder]
+  </div>
+</Frame>
+
+
+<Steps>
+  <Step title="Start Creating">
+    Click **Create Link Set** from Quick Actions on your dashboard, or go to **Links** → **Create Link Set**
+    
+    {/* TODO: Screenshot - Quick Actions showing Create Link Set button */}
+<Frame caption="Screenshot: Quick Actions showing Create Link Set button">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Choose Your Source">
+    - **From a List** – Select an existing contact list
+    - **Select Contacts** – Pick individual contacts
+    - **Connect to Workflow** – For HubSpot automation
+    
+    {/* TODO: Screenshot - Source selection options */}
+<Frame caption="Screenshot: Source selection options">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Enter Your Page URL">
+    Paste the URL of the page you want to personalize. Pockla loads it and shows your site pages for quick selection.
+    
+    {/* TODO: Screenshot - URL input with site search dropdown */}
+<Frame caption="Screenshot: URL input with site search dropdown">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Configure with AI Chat">
+    Use the AI chat to describe what you want to personalize. The AI will help you select elements and write prompts.
+    
+    {/* TODO: Screenshot - AI chat panel for configuration */}
+<Frame caption="Screenshot: AI chat panel for configuration">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Preview">
+    Test with a sample contact to see how the personalization looks before generating for everyone.
+    
+    {/* TODO: Screenshot - Preview showing personalized page for sample contact */}
+<Frame caption="Screenshot: Preview showing personalized page for sample contact">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+  
+  <Step title="Generate & Publish">
+    Generate pages for all contacts. Once ready, publish to make the URLs live.
+    
+    {/* TODO: Screenshot - Instances view with generate/publish buttons */}
+<Frame caption="Screenshot: Instances view with generate/publish buttons">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+    
+  </Step>
+</Steps>
+
+## Available Contact Data
+
+Your prompts can reference any contact field:
+
+| Variable | Description |
+|----------|-------------|
+| `{{firstName}}` | Contact's first name |
+| `{{lastName}}` | Contact's last name |
+| `{{email}}` | Email address |
+| `{{company}}` | Company name |
+| `{{jobTitle}}` | Job title / role |
+| `{{phone}}` | Phone number |
+
+Plus any custom enrichments you've created (e.g., `{{company_summary}}`, `{{recent_news}}`).
+
+## Link Statuses
+
+Each generated page (instance) has a status:
+
+| Status | Meaning |
+|--------|---------|
+| **Generating** | AI is creating personalized content |
+| **Ready** | Generated but not yet published |
+| **Published** | Live and accessible via URL |
+| **Failed** | Generation error (check logs) |
+
+## Viewing Your Links
+
+Go to **Links** in the sidebar to see all your Link Sets. Click a Link Set to see:
+
+- All generated instances
+- Status of each (generating, ready, published)
+- Click/view analytics (after publishing)
+- Individual preview for each contact
+
+{/* TODO: Screenshot - Links page showing Link Sets list */}
+<Frame caption="Screenshot: Links page showing Link Sets list">
+  <div className="bg-muted/50 rounded-lg p-8 text-center text-muted-foreground text-sm">
+    [Screenshot placeholder]
+  </div>
+</Frame>
+
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Run for Contacts" icon="users" href="/links/running-for-contacts">
+    Generate pages for a specific set of contacts
+  </Card>
+  <Card title="Workflow Integration" icon="arrows-rotate" href="/links/workflow-integration">
+    Automate with HubSpot workflows
+  </Card>
+</CardGroup>
